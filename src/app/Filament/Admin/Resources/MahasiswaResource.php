@@ -41,7 +41,7 @@ class MahasiswaResource extends Resource
                 Select::make('course_id')
                     ->relationship('course', 'nama_course') // Sesuaikan nama relasi & kolom
                     ->label('Course')
-                    ->required()
+                    ->required(),
                 Forms\Components\TextInput::make('Email')->required(),
                 Forms\Components\TextInput::make('Phone')->required(),
                 DatePicker::make('date_of_birth')->format('d/m/Y'),
