@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\ProductApiController;
+use App\Controllers\Api\ProductApiController;
+use App\Http\Controllers\Api\JurusanApiController;
 
-Route::middleware('client.auth')->group(function (){
-    Route::get('/products', [ProductApiController::class, 'index']);
-    Route::post('/products', [ProductApiController::class, 'store']);
-});
+Route::get('/jurusan', [JurusanApiController::class, 'index']);
+Route::get('/products', [ProductApiController::class, 'index']);
